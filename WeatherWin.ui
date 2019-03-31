@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>522</width>
+    <height>417</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="clearBtn">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>310</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清空</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>70</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>城市</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="resultText">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>120</y>
+     <width>291</width>
+     <height>171</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="weatherComboBox">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>70</y>
+     <width>231</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>北京</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>天津</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="queryBtn">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>310</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>queryBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>queryWeather()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>118</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clearBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>clearResult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>375</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>queryWeather()</slot>
+  <slot>clearResult()</slot>
+ </slots>
+</ui>
